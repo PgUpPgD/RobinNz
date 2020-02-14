@@ -1,0 +1,15 @@
+server:
+  port: 8900
+eureka: #需要注册到注册中心  因为需要知道有哪些服务
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: MyZuul
+#Zuul实现路由转发的作用
+zuul:
+  routes: #路由
+    hello: #随便命名
+      path: /robin/**  #随意命名 但是需要符合格式 外界的访问路径
+      service-id: robinconsumer  # 服务的名称 一般都是指向的消费者

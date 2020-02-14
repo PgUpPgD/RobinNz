@@ -18,7 +18,7 @@ public class Weather {
     @Id //标记主键对应的属性
     @GeneratedValue(strategy = GenerationType.IDENTITY) //设置主键的生成策略 Mysql 自增
     private int id;
-    @Column(length = 20)
+    @Column(length = 20,name = "cname")
     private String city;
     private String citycode;
     private Date cdate;

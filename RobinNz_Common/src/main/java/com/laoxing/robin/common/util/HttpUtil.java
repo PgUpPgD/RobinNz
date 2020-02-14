@@ -107,12 +107,4 @@ public class HttpUtil {
         }
         return null;
     }
-
-    public static void main(String[] args) {
-        //System.out.println(getJson("https://way.jd.com/jisuapi/weather?city=武汉&appkey=9878b9b510123e52a951fe2074d19be1"));
-        Map<String,String> map=new HashMap<>();
-        map.put("appkey","9878b9b510123e52a951fe2074d19be1");
-        map.put("city","南京");
-        System.err.println(postJson("https://way.jd.com/jisuapi/weather",map));
-    }
 }

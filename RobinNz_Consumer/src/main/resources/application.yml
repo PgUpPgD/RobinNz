@@ -1,0 +1,11 @@
+server:
+  port: 8902
+spring:
+  application:
+    name: robinconsumer
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

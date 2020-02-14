@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+#实现注册中心的相关设置
+eureka:
+  instance:
+    hostname: localhost  #主机的名称
+  client:
+    registerWithEureka: false #当前项目不进行注册 服务端
+    fetchRegistry: false      #屏蔽 发现服务
+    serviceUrl:   #注册中心 服务端的地址 注册地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
